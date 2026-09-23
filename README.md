@@ -13,6 +13,24 @@ The easiest free host is [Vercel](https://vercel.com):
 
 [Cloudflare Pages](https://pages.cloudflare.com/) and [Netlify](https://www.netlify.com/) free plans work the same way: connect the repo and deploy.
 
+## Use it as a phone app
+
+No App Store account needed. After the site is live:
+
+**iPhone / iPad**
+
+1. Open the site in **Safari** (not Chrome).
+2. Tap **Share**.
+3. Tap **Add to Home Screen**.
+
+**Android**
+
+1. Open the site in **Chrome**.
+2. Tap the menu (⋮).
+3. Tap **Install app** or **Add to Home Screen**.
+
+Lumen then sits next to your other apps and opens full screen. Habits stay on that phone.
+
 ## Run it yourself
 
 ```bash

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Check, Plus } from "lucide-react";
 import { DayHabits } from "@/components/day-habits";
 import { HabitFormDialog } from "@/components/habit-form-dialog";
+import { InstallPrompt } from "@/components/install-prompt";
 import { MonthCalendar } from "@/components/month-calendar";
 import { StatsStrip } from "@/components/stats-strip";
 import { WeekGrid } from "@/components/week-grid";
@@ -86,8 +87,8 @@ function LumenReady() {
 
   return (
     <TooltipProvider delayDuration={200}>
-      <div className="min-h-dvh bg-background text-foreground">
-        <header className="border-b border-border/80">
+      <div className="flex min-h-dvh flex-col bg-background text-foreground">
+        <header className="border-b border-border/80 pt-[env(safe-area-inset-top)]">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
             <div className="flex items-center gap-3">
               <span className="grid size-9 place-items-center rounded-lg bg-primary text-primary-foreground">
@@ -195,6 +196,9 @@ function LumenReady() {
             </div>
           </section>
         </main>
+        <div className="mt-auto">
+          <InstallPrompt />
+        </div>
       </div>
 
       <HabitFormDialog
@@ -308,7 +312,7 @@ function CalendarHint() {
 function AppSkeleton() {
   return (
     <div className="min-h-dvh bg-background text-foreground">
-      <header className="border-b border-border/80">
+      <header className="border-b border-border/80 pt-[env(safe-area-inset-top)]">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
           <div>
             <p className="font-serif text-2xl leading-none tracking-tight">Lumen</p>
