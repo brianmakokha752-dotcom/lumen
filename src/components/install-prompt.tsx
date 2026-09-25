@@ -118,8 +118,12 @@ export function InstallPrompt() {
               <span className="block text-sm font-medium">Add Lumen to your home screen</span>
               <span className="mt-0.5 block text-sm text-muted-foreground">
                 {deferred
-                  ? "Tap here, then Install. It opens like any other app."
-                  : "Tap here for the 3 steps. Apple does not allow a one-tap install."}
+                  ? "Tap Install. Chrome will add the Lumen icon to your home screen."
+                  : android
+                    ? "Tap How, then use Chrome’s ⋮ menu → Install app."
+                    : ios
+                      ? "Tap How, then Safari Share → Add to Home Screen."
+                      : "Tap How for the steps. Use Chrome on Android."}
               </span>
             </span>
           </button>
